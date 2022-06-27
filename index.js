@@ -537,6 +537,9 @@ const getBadges = (flags) => {
     case 0:
       badges = '`No Badges`';
       break;
+    default:
+      badges = '`No Badges`';
+      break;
   }
   return badges;
 };
